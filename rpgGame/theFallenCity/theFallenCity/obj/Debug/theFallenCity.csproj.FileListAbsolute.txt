@@ -12,8 +12,10 @@ C:\Users\lahw\OneDrive - Conestoga College\VideoGameMakingClass\gameFinalProject
 C:\Users\lahw\OneDrive - Conestoga College\VideoGameMakingClass\gameFinalProject\The-Fallen-City-RPG\rpgGame\theFallenCity\theFallenCity\bin\DesktopGL\AnyCPU\Debug\theFallenCity.exe
 C:\Users\lahw\OneDrive - Conestoga College\VideoGameMakingClass\gameFinalProject\The-Fallen-City-RPG\rpgGame\theFallenCity\theFallenCity\bin\DesktopGL\AnyCPU\Debug\theFallenCity.pdb
 C:\Users\lahw\OneDrive - Conestoga College\VideoGameMakingClass\gameFinalProject\The-Fallen-City-RPG\rpgGame\theFallenCity\theFallenCity\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
-C:\Users\lahw\OneDrive - Conestoga College\VideoGameMakingClass\gameFinalProject\The-Fallen-City-RPG\rpgGame\theFallenCity\theFallenCity\obj\Debug\theFallenCity.csprojAssemblyReference.cache
 C:\Users\lahw\OneDrive - Conestoga College\VideoGameMakingClass\gameFinalProject\The-Fallen-City-RPG\rpgGame\theFallenCity\theFallenCity\obj\Debug\theFallenCity.csproj.CoreCompileInputs.cache
 C:\Users\lahw\OneDrive - Conestoga College\VideoGameMakingClass\gameFinalProject\The-Fallen-City-RPG\rpgGame\theFallenCity\theFallenCity\obj\Debug\theFallenCity.csproj.CopyComplete
 C:\Users\lahw\OneDrive - Conestoga College\VideoGameMakingClass\gameFinalProject\The-Fallen-City-RPG\rpgGame\theFallenCity\theFallenCity\obj\Debug\theFallenCity.exe
 C:\Users\lahw\OneDrive - Conestoga College\VideoGameMakingClass\gameFinalProject\The-Fallen-City-RPG\rpgGame\theFallenCity\theFallenCity\obj\Debug\theFallenCity.pdb
+C:\Users\lahw\OneDrive - Conestoga College\VideoGameMakingClass\gameFinalProject\The-Fallen-City-RPG\rpgGame\theFallenCity\theFallenCity\bin\DesktopGL\AnyCPU\Debug\Content\splashScreen\splashScreen.xnb
+C:\Users\lahw\OneDrive - Conestoga College\VideoGameMakingClass\gameFinalProject\The-Fallen-City-RPG\rpgGame\theFallenCity\theFallenCity\bin\DesktopGL\AnyCPU\Debug\Content\splashScreen\splashScreen.png
+C:\Users\lahw\OneDrive - Conestoga College\VideoGameMakingClass\gameFinalProject\The-Fallen-City-RPG\rpgGame\theFallenCity\theFallenCity\bin\DesktopGL\AnyCPU\Debug\Content\mainLogo.xnb
