@@ -13,14 +13,16 @@ namespace theFallenCity
     public class splashScreen : gameScreen
     {
         Texture2D image;
-        string path;
+        public string path;
+        
         //splashScreen.png
+        //splashScreen/splashScreen
 
         public override void loadContent()
         {
             base.loadContent();
-            content = new ContentManager(screenManager.Instance.Content.ServiceProvider, "Content");
-            path = "splashScreen/splashScreen";
+            //content = new ContentManager(screenManager.Instance.Content.ServiceProvider, "Content");
+            //logoPath = "splashScreen/splashScreen";
             image = content.Load<Texture2D>(path);
         }
 

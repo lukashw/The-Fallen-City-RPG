@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
+using System.Xml.Serialization;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +16,7 @@ namespace theFallenCity
         private static screenManager instance;
         public Vector2 Dimensions { private set; get; }
         public ContentManager Content { private set; get; }
-
+        xmlManger<gameScreen> xmlGameScreenManager;
         gameScreen currentScreen;
 
 
@@ -34,7 +36,13 @@ namespace theFallenCity
         public screenManager()
         {
             Dimensions = new Vector2(640, 480);
+            
             currentScreen = new splashScreen();
+            xmlGameScreenManager = new xmlManger<gameScreen>();
+            xmlGameScreenManager.Type = currentScreen.Type;
+            currentScreen = xmlGameScreenManager.Load("Load/splashScreen.xml");
+
+
         }
 
         //loads content
