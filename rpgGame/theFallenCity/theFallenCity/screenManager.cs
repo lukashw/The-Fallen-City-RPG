@@ -13,12 +13,15 @@ namespace theFallenCity
 {
      public class screenManager
     {
-        private static screenManager instance;
+
+        public static screenManager instance;
         public Vector2 Dimensions { private set; get; }
         public ContentManager Content { private set; get; }
         xmlManger<gameScreen> xmlGameScreenManager;
         gameScreen currentScreen;
 
+        public GraphicsDevice GraphicsDevice;
+        public SpriteBatch SpriteBatch;
 
         public static screenManager Instance
         {
@@ -49,12 +52,12 @@ namespace theFallenCity
         public void LoadContent(ContentManager content)
         {
             this.Content = new ContentManager(content.ServiceProvider, "content");
-            currentScreen.loadContent();
+            currentScreen.LoadContent();
         }
         //unloads content
         public virtual void UnloadContent()
         {
-            currentScreen.unloadContent();
+            currentScreen.UnloadContent();
         }
         //updates the screen
         public virtual void Update(GameTime gametime)

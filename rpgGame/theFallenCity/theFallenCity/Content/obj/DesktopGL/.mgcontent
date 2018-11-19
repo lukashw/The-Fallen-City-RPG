@@ -4,7 +4,13 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/lahw/OneDrive - Conestoga College/VideoGameMakingClass/gameFinalProject/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/splashScreen/splashScreen.png</File>
-    <File>C:/Users/lahw/OneDrive - Conestoga College/VideoGameMakingClass/gameFinalProject/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/mainLogo.png</File>
+    <File>/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/FontBoi.spritefont</File>
+    <File>/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/mainLogo.png</File>
+    <File>/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/splashScreen/splashScreen.png</File>
   </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
 </SourceFileCollection>

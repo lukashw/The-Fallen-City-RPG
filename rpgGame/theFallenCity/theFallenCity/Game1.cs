@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Xml.Serialization;
 
 namespace theFallenCity
 {
@@ -42,6 +43,8 @@ namespace theFallenCity
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            screenManager.Instance.GraphicsDevice = GraphicsDevice;
+            screenManager.Instance.SpriteBatch = spriteBatch;
             screenManager.Instance.LoadContent(Content);
             // TODO: use this.Content to load your game content here
         }

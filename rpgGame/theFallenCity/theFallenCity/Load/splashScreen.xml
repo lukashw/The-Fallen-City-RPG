@@ -1,4 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <splashScreen>
-  <path>splashScreen/splashScreen</path>
+    <image>
+          <Path>splashScreen/splashScreen</Path>
+        <Position>
+            <x>200</x>
+            <y>10</y>
+        </Position>
+
+    </image>
 </splashScreen>

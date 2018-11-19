@@ -12,20 +12,20 @@ namespace theFallenCity
     {
         public Type Type;
 
-        public T Load(string path)
+        public T Load(string Path)
         {
             T instance;
 
-            using (TextReader reader = new StreamReader(path))
+            using (TextReader reader = new StreamReader(Path))
             {
                 XmlSerializer xml = new XmlSerializer(Type);
                 instance = (T)xml.Deserialize(reader);
             }
             return instance;
         }
-        public void Save(string path, object obj)
+        public void Save(string Path, object obj)
         {
-            using (TextWriter writer = new StreamWriter(path))
+            using (TextWriter writer = new StreamWriter(Path))
             {
                 XmlSerializer xml = new XmlSerializer(Type);
                 xml.Serialize(writer, obj);

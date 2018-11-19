@@ -49,6 +49,7 @@
     <Compile Include="screenManager.cs" />
     <Compile Include="splashScreen.cs" />
     <Compile Include="xmlManger.cs" />
+    <Compile Include="Image.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

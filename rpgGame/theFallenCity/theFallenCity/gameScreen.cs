@@ -22,13 +22,13 @@ namespace theFallenCity
             Type = this.GetType();
         }
 
-        public virtual void loadContent()
+        public virtual void LoadContent()
         {
             content = new ContentManager(screenManager.Instance.Content.ServiceProvider, "Content");
 
         }
 
-        public virtual void unloadContent()
+        public virtual void UnloadContent()
         {
             content.Unload();
         }
