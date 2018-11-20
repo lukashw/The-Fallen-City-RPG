@@ -50,6 +50,8 @@
     <Compile Include="splashScreen.cs" />
     <Compile Include="xmlManger.cs" />
     <Compile Include="Image.cs" />
+    <Compile Include="ImageEffect.cs" />
+    <Compile Include="FadeEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

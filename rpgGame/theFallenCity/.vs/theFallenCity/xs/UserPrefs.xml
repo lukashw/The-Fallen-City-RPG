@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{5D854D52-F8E5-45E9-968C-28CABAA6FEA3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="theFallenCity/Image.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="theFallenCity Status">
     <Files>
-      <File FileName="theFallenCity/Image.cs" Line="19" Column="20" />
-      <File FileName="theFallenCity/Load/splashScreen.xml" Line="7" Column="17" />
-      <File FileName="theFallenCity/xmlManger.cs" Line="21" Column="1" />
-      <File FileName="theFallenCity/splashScreen.cs" Line="44" Column="18" />
+      <File FileName="theFallenCity/Image.cs" Line="41" Column="13" />
+      <File FileName="theFallenCity/FadeEffect.cs" Line="52" Column="20" />
+      <File FileName="theFallenCity/Load/splashScreen.xml" Line="5" Column="17" />
+      <File FileName="theFallenCity/splashScreen.cs" Line="15" Column="20" />
+      <File FileName="theFallenCity Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -2,10 +2,9 @@
 <splashScreen>
     <image>
           <Path>splashScreen/splashScreen</Path>
-        <Position>
-            <x>200</x>
-            <y>10</y>
-        </Position>
+        <Effects>FadeEffect</Effects>
+        <IsActive>true</IsActive>
+        <Alpha>1</Alpha>
 
     </image>
 </splashScreen>

@@ -19,28 +19,68 @@ namespace theFallenCity
         [XmlIgnore]
         public Texture2D texture;
         //declaing variables and stuff
+        public bool IsActive;
         public Vector2 Position, Scale;
         public float Alpha;
         public string Text, FontNames, Path;
-
+        Dictionary<string, ImageEffect> effectList;
+        public string Effects;
 
         public Rectangle sourceRec;
-
 
         Vector2 origin;
         //declaing variables and stuff
         ContentManager content;
         RenderTarget2D renderTarget;
         SpriteFont font;
+        //image effect methods
+        public FadeEffect FadeEffect;
+
+        void SetEffect<T>(ref T effect)
+        { 
+            if (effect == null) 
+            { effect = (T)Activator.CreateInstance(typeof(T)); }
+        else{
+                (effect as ImageEffect).IsActive = true;
+                var obj = this;
+                (effect as ImageEffect).LoadContent(ref obj); 
+             }
+            effectList.Add(effect.GetType().ToString().Replace("theFallenCity.", ""), (effect as ImageEffect));
+
+        }
+
+        public void ActivateEffect(string effect)
+        {
+
+            if (effectList.ContainsKey(effect))
+            { effectList[effect].IsActive = true;
+                var obj = this;
+                effectList[effect].LoadContent(ref obj);
+            }
+
+        }
+        public void DeactivateEffect (string effect)
+        {
+            if(effectList.ContainsKey(effect)){
+                effectList[effect].IsActive = false;
+                effectList[effect].UnloadContent();
+            }
+        }
+        //image effect methods
+
+
+
         public Image()
         {
             //set defaults for class
-            Path = Text = String.Empty;
+            IsActive = false;
+            Path = Text = Effects =String.Empty;
             FontNames = "FontBoi";
             Position = Vector2.Zero;
             Scale = Vector2.One;
             Alpha = 1.0f;
-            sourceRec = Rectangle.Empty; 
+            sourceRec = Rectangle.Empty;
+            effectList = new Dictionary<string, ImageEffect>();
         }
 
         //loading content
@@ -88,18 +128,29 @@ namespace theFallenCity
 
             texture = renderTarget;
             screenManager.Instance.GraphicsDevice.SetRenderTarget(null);
+
+
+            SetEffect<FadeEffect>(ref FadeEffect);
+            if (Effects != string.Empty) { string[] split = Effects.Split(':');
+                foreach (string item in split) { ActivateEffect(item); }
+            }
+            //end of load
         }
         //unloading content
         public virtual void UnloadContent()
         {
 
             content.Unload();
+            foreach (var effect in effectList) { DeactivateEffect(effect.Key); }
 
         }
         //update Game  time 
         public void Update(GameTime gameTime)
         {
-
+            foreach (var effect in effectList) {
+                if (effect.Value.IsActive) { effect.Value.Update(gameTime);
+                }
+            }
         }
         //public draw spritebatch
         public void Draw(SpriteBatch spriteBatch)

@@ -13,7 +13,7 @@ namespace theFallenCity
     public class splashScreen : gameScreen
     {
         public Image image; 
-        
+
         //splashScreen.png
         //splashScreen/splashScreen
 
@@ -21,6 +21,8 @@ namespace theFallenCity
         {
             base.LoadContent();
             image.LoadContent();
+            image.FadeEffect.FadeSpeed = 0.5f;
+
             //content = new ContentManager(screenManager.Instance.Content.ServiceProvider, "Content");
             //logoPath = "splashScreen/splashScreen";
         }
