@@ -14,11 +14,12 @@
 /Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/libopenal.1.dylib
 /Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/MonoGame.Framework.dll.config
 /Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/splashScreen/splashScreen.xnb
-/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/mainLogo.xnb
 /Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/obj/Debug/theFallenCity.exe
 /Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/obj/Debug/theFallenCity.pdb
 /Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/theFallenCity.exe
 /Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/theFallenCity.pdb
 /Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/MonoGame.Framework.dll
 /Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/MonoGame.Framework.xml
-/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/FontBoi.xnb
+/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/textFonts/FontBoi.xnb
+/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/ScreenManager/blackBox.xnb
+/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/moon.xnb

@@ -2,7 +2,6 @@
 <splashScreen>
     <image>
           <Path>splashScreen/splashScreen</Path>
-        <Effects>FadeEffect</Effects>
         <IsActive>true</IsActive>
         <Alpha>1</Alpha>
 

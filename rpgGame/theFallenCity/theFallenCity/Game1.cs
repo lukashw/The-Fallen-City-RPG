@@ -28,8 +28,8 @@ namespace theFallenCity
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            graphics.PreferredBackBufferWidth = (int)screenManager.Instance.Dimensions.X;
-            graphics.PreferredBackBufferHeight = (int)screenManager.Instance.Dimensions.Y;
+            graphics.PreferredBackBufferWidth = (int)ScreenManager.Instance.Dimensions.X;
+            graphics.PreferredBackBufferHeight = (int)ScreenManager.Instance.Dimensions.Y;
             graphics.ApplyChanges();
 
             base.Initialize();
@@ -43,9 +43,9 @@ namespace theFallenCity
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            screenManager.Instance.GraphicsDevice = GraphicsDevice;
-            screenManager.Instance.SpriteBatch = spriteBatch;
-            screenManager.Instance.LoadContent(Content);
+            ScreenManager.Instance.GraphicsDevice = GraphicsDevice;
+            ScreenManager.Instance.SpriteBatch = spriteBatch;
+            ScreenManager.Instance.LoadContent(Content);
             // TODO: use this.Content to load your game content here
         }
 
@@ -56,7 +56,7 @@ namespace theFallenCity
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
-            screenManager.Instance.UnloadContent();
+            ScreenManager.Instance.UnloadContent();
         }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace theFallenCity
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            screenManager.Instance.Update(gameTime);
+            ScreenManager.Instance.Update(gameTime);
 
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             { Exit(); }
@@ -85,7 +85,7 @@ namespace theFallenCity
             GraphicsDevice.Clear(Color.Black);
             spriteBatch.Begin();
             // TODO: Add your drawing code here
-            screenManager.Instance.Draw(spriteBatch);
+            ScreenManager.Instance.Draw(spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);
         }

@@ -113,6 +113,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="app.manifest" />
+    <None Include="Content\ScreenManager\blackBox.png" />
+    <None Include="Load\ScreenManager.xml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -122,6 +124,9 @@
     <Content Include="Load\splashScreen.xml">
       <SubType>Designer</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\ScreenManager\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

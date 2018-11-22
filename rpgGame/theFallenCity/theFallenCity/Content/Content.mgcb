@@ -13,14 +13,14 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin FontBoi.spritefont
+#begin moon.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
-/build:FontBoi.spritefont
+/build:moon.spritefont
 
-#begin mainLogo.png
+#begin ScreenManager/blackBox.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -30,7 +30,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:mainLogo.png
+/build:ScreenManager/blackBox.png
 
 #begin splashScreen/splashScreen.png
 /importer:TextureImporter
@@ -43,4 +43,11 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:splashScreen/splashScreen.png
+
+#begin textFonts/FontBoi.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:textFonts/FontBoi.spritefont
 

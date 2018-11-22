@@ -12,6 +12,10 @@ namespace theFallenCity
     {
         public Type Type;
 
+        public xmlManger(){
+            Type = typeof(T);
+        }
+
         public T Load(string Path)
         {
             T instance;

@@ -17,14 +17,17 @@ namespace theFallenCity
         [XmlIgnore]
         public Type Type;
 
+        public string XmlPath;
+
         public gameScreen()
         {
             Type = this.GetType();
+            XmlPath ="Load/"+Type.ToString().Replace("theFallenCity.", "") + ".xml";
         }
 
         public virtual void LoadContent()
         {
-            content = new ContentManager(screenManager.Instance.Content.ServiceProvider, "Content");
+            content = new ContentManager(ScreenManager.Instance.Content.ServiceProvider, "Content");
 
         }
 

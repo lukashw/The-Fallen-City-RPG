@@ -36,6 +36,19 @@ namespace theFallenCity
         //image effect methods
         public FadeEffect FadeEffect;
 
+        public Image()
+        {
+            //set defaults for class
+            IsActive = false;
+            Path = Text = Effects = String.Empty;
+            FontNames = "moon";
+            Position = Vector2.Zero;
+            Scale = Vector2.One;
+            Alpha = 1.0f;
+            sourceRec = Rectangle.Empty;
+            effectList = new Dictionary<string, ImageEffect>();
+        }
+
         void SetEffect<T>(ref T effect)
         { 
             if (effect == null) 
@@ -70,23 +83,12 @@ namespace theFallenCity
 
 
 
-        public Image()
-        {
-            //set defaults for class
-            IsActive = false;
-            Path = Text = Effects =String.Empty;
-            FontNames = "FontBoi";
-            Position = Vector2.Zero;
-            Scale = Vector2.One;
-            Alpha = 1.0f;
-            sourceRec = Rectangle.Empty;
-            effectList = new Dictionary<string, ImageEffect>();
-        }
+     
 
         //loading content
          public void LoadContent()
         {
-            content = new ContentManager(screenManager.Instance.Content.ServiceProvider, "Content");
+            content = new ContentManager(ScreenManager.Instance.Content.ServiceProvider, "Content");
             if (Path!=string.Empty){
 
                 texture = content.Load<Texture2D>(Path);
@@ -112,22 +114,22 @@ namespace theFallenCity
 
             }
 
-            renderTarget = new RenderTarget2D(screenManager.Instance.GraphicsDevice, (int)dimentions.X, (int)dimentions.Y);
+            renderTarget = new RenderTarget2D(ScreenManager.Instance.GraphicsDevice, (int)dimentions.X, (int)dimentions.Y);
             //setting render target as main target
-            screenManager.Instance.GraphicsDevice.SetRenderTarget(renderTarget);
-            screenManager.Instance.GraphicsDevice.Clear(Color.Transparent);
-            screenManager.Instance.SpriteBatch.Begin();
+            ScreenManager.Instance.GraphicsDevice.SetRenderTarget(renderTarget);
+            ScreenManager.Instance.GraphicsDevice.Clear(Color.Transparent);
+            ScreenManager.Instance.SpriteBatch.Begin();
 
             if (texture != null)
             {
-                screenManager.Instance.SpriteBatch.Draw(texture, Vector2.Zero, Color.White);
+                ScreenManager.Instance.SpriteBatch.Draw(texture, Vector2.Zero, Color.White);
             }
-            screenManager.Instance.SpriteBatch.DrawString(font, Text, Vector2.Zero, Color.White);
+            ScreenManager.Instance.SpriteBatch.DrawString(font, Text, Vector2.Zero, Color.White);
 
-            screenManager.Instance.SpriteBatch.End();
+            ScreenManager.Instance.SpriteBatch.End();
 
             texture = renderTarget;
-            screenManager.Instance.GraphicsDevice.SetRenderTarget(null);
+            ScreenManager.Instance.GraphicsDevice.SetRenderTarget(null);
 
 
             SetEffect<FadeEffect>(ref FadeEffect);

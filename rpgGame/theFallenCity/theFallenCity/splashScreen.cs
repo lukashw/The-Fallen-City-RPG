@@ -38,7 +38,9 @@ namespace theFallenCity
 
             base.Update(gametime);
             image.Update(gametime);
-
+            if(Keyboard.GetState().IsKeyDown(Keys.Enter) && !ScreenManager.Instance.IsTransitioning){
+                ScreenManager.Instance.ScreenChange("splashScreen");
+            }
         }
 
         public override void Draw(SpriteBatch spritebatch)
