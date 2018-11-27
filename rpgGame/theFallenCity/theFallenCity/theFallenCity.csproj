@@ -52,6 +52,7 @@
     <Compile Include="Image.cs" />
     <Compile Include="ImageEffect.cs" />
     <Compile Include="FadeEffect.cs" />
+    <Compile Include="InputManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

@@ -38,6 +38,7 @@ namespace theFallenCity
 
         public virtual void Update(GameTime gametime)
         {
+            InputManager.Instance.Update();
 
         }
 
