@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/textFonts/FontBoi.spritefont</SourceFile>
-  <SourceTime>2018-09-23T17:56:00-04:00</SourceTime>
+  <SourceTime>2018-11-27T14:08:52.469442-05:00</SourceTime>
   <DestFile>/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/bin/DesktopGL/textFonts/FontBoi.xnb</DestFile>
-  <DestTime>2018-11-22T10:41:23.835569-05:00</DestTime>
+  <DestTime>2018-11-27T14:13:45.783598-05:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2018-09-23T17:56:40-04:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

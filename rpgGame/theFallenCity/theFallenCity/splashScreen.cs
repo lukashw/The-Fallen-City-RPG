@@ -39,7 +39,7 @@ namespace theFallenCity
             base.Update(gametime);
             image.Update(gametime);
             if(InputManager.Instance.KeyPressed(Keys.Enter,Keys.Z)){
-                ScreenManager.Instance.ScreenChange("splashScreen");
+                ScreenManager.Instance.ScreenChange("TitleScreen");
             }
         }
 

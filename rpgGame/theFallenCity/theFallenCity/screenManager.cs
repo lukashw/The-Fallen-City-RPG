@@ -50,7 +50,8 @@ namespace theFallenCity
         }
 
         //screen transition
-        public void ScreenChange(string screenName){
+        public void ScreenChange(string screenName)
+        {
             newScreen = (gameScreen)Activator.CreateInstance(Type.GetType("theFallenCity." + screenName));
             Image.IsActive = true;
             Image.FadeEffect.Increase = true;
@@ -58,28 +59,26 @@ namespace theFallenCity
             IsTransitioning = true;
         }
 
-        void Transition(GameTime gameTime){
-            if(IsTransitioning==true){
+        void Transition(GameTime gameTime)
+        {
+            if (IsTransitioning)
+            {
                 Image.Update(gameTime);
-                if(Image.Alpha == 1.0f){
+                if (Image.Alpha == 1.0f)
+                {
                     currentScreen.UnloadContent();
                     currentScreen = newScreen;
                     xmlGameScreenManager.Type = currentScreen.Type;
                     if (File.Exists(currentScreen.XmlPath))
-                    {
                         currentScreen = xmlGameScreenManager.Load(currentScreen.XmlPath);
-                        currentScreen.LoadContent();
-                    }
-                    else if (Image.Alpha == 0.0f) {
-                        Image.IsActive = false;
-                        IsTransitioning = false;
-
-                    }
-
+                    currentScreen.LoadContent();
                 }
-
+                else if (Image.Alpha == 0.0f)
+                {
+                    Image.IsActive = false;
+                    IsTransitioning = false;
+                }
             }
-
         }
 
         //screen transition
@@ -88,8 +87,10 @@ namespace theFallenCity
         {
             Dimensions = new Vector2(640, 480);
             currentScreen = new splashScreen();
-            xmlGameScreenManager = new xmlManger<gameScreen>();
-            xmlGameScreenManager.Type = currentScreen.Type;
+            xmlGameScreenManager = new xmlManger<gameScreen>
+            {
+                Type = currentScreen.Type
+            };
             currentScreen = xmlGameScreenManager.Load("Load/splashScreen.xml");
 
 

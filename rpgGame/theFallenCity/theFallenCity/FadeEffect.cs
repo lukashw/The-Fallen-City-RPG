@@ -35,26 +35,25 @@ namespace theFallenCity
             base.Update(gameTime);
             if (image.IsActive)
             {
+
                 if (!Increase)
-                { 
-                    image.Alpha -= FadeSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds; 
-                } 
-                else { image.Alpha += FadeSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds; 
-                }
+                    image.Alpha -= FadeSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                else
+                    image.Alpha += FadeSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
                 if (image.Alpha < 0.0f)
                 {
-                    Increase = true; image.Alpha = 0.0f; 
+                    Increase = true;
+                    image.Alpha = 0.0f;
                 }
-                else if (image.Alpha > 0.0f)
+                else if (image.Alpha > 1.0f)
                 {
                     Increase = false;
+                    image.Alpha = 1.0f;
                 }
-                // image.Alpha = 1.0f;
-
             }
-            else { image.Alpha = 1.0f; }
-
-
+            else
+                image.Alpha = 1.0f;
         }
     }
 }

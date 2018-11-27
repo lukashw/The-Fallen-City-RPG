@@ -41,7 +41,7 @@ namespace theFallenCity
             //set defaults for class
             IsActive = false;
             Path = Text = Effects = String.Empty;
-            FontNames = "moon";
+            FontNames = "textFonts/FontBoi";
             Position = Vector2.Zero;
             Scale = Vector2.One;
             Alpha = 1.0f;
@@ -88,33 +88,37 @@ namespace theFallenCity
         //loading content
          public void LoadContent()
         {
-            content = new ContentManager(ScreenManager.Instance.Content.ServiceProvider, "Content");
-            if (Path!=string.Empty){
+            content = new ContentManager(
+                           ScreenManager.Instance.Content.ServiceProvider, "Content");
+
+            if (Path != String.Empty)
+            {
 
                 texture = content.Load<Texture2D>(Path);
             }
 
             font = content.Load<SpriteFont>(FontNames);
 
-            Vector2 dimentions = Vector2.Zero;
+            Vector2 dimensions = Vector2.Zero;
             //whichever element is taller(text or image) that will be the max hieght of the image
 
-            if (texture!=null){
-                dimentions.X += texture.Width;
-                dimentions.X += font.MeasureString(Text).X;
-            }
-            if(texture !=null){
-                dimentions.Y = Math.Max(texture.Height, font.MeasureString(Text).Y);
-            }else{
-                dimentions.Y = font.MeasureString(Text).Y;
+            if (texture!=null)
+                dimensions.X += texture.Width;
+                dimensions.X += font.MeasureString(Text).X;
+            
+            if(texture !=null)
+                dimensions.Y = Math.Max(texture.Height, font.MeasureString(Text).Y);
+            else
+                dimensions.Y = font.MeasureString(Text).Y;
+
+
+            if (sourceRec == Rectangle.Empty)
+            {
+                sourceRec = new Rectangle(0, 0, (int)dimensions.X, (int)dimensions.Y);
+
             }
 
-            if (sourceRec == Rectangle.Empty){
-                sourceRec = new Rectangle(0, 0, (int)dimentions.X, (int)dimentions.Y);
-
-            }
-
-            renderTarget = new RenderTarget2D(ScreenManager.Instance.GraphicsDevice, (int)dimentions.X, (int)dimentions.Y);
+            renderTarget = new RenderTarget2D(ScreenManager.Instance.GraphicsDevice, (int)dimensions.X, (int)dimensions.Y);
             //setting render target as main target
             ScreenManager.Instance.GraphicsDevice.SetRenderTarget(renderTarget);
             ScreenManager.Instance.GraphicsDevice.Clear(Color.Transparent);
@@ -129,6 +133,7 @@ namespace theFallenCity
             ScreenManager.Instance.SpriteBatch.End();
 
             texture = renderTarget;
+
             ScreenManager.Instance.GraphicsDevice.SetRenderTarget(null);
 
 

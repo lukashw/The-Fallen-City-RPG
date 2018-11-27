@@ -53,6 +53,10 @@
     <Compile Include="ImageEffect.cs" />
     <Compile Include="FadeEffect.cs" />
     <Compile Include="InputManager.cs" />
+    <Compile Include="TitleScreen.cs" />
+    <Compile Include="Load\Menus\Menu.cs" />
+    <Compile Include="Load\Menus\MenuItem.cs" />
+    <Compile Include="Load\Menus\MenuManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -116,6 +120,8 @@
     <None Include="app.manifest" />
     <None Include="Content\ScreenManager\blackBox.png" />
     <None Include="Load\ScreenManager.xml" />
+    <None Include="Load\Menus\TitleMenu.xml" />
+    <None Include="Content\Fonts\FontBoi.spritefont" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -128,6 +134,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\ScreenManager\" />
+    <Folder Include="Load\Menus\" />
+    <Folder Include="Content\Fonts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

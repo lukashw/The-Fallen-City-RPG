@@ -82,7 +82,7 @@ namespace theFallenCity
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Black);
+            GraphicsDevice.Clear(Color.Blue);
             spriteBatch.Begin();
             // TODO: Add your drawing code here
             ScreenManager.Instance.Draw(spriteBatch);
