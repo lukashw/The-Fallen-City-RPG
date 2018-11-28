@@ -6,8 +6,6 @@ namespace theFallenCity
         public string LinkType;
         public string LinkID;
         public Image Image;
-        public MenuItem()
-        {
-        }
+       
     }
 }

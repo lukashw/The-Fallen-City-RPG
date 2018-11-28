@@ -21,9 +21,26 @@ namespace theFallenCity
         int itemNumber;
         string id;
 
+        public int ItemNumber
+        {
+            get {return itemNumber;}
+        }
+
         public string ID {
             get { return id; }
             set {id = value;OnMenuChange (this, null);
+            }
+        }
+
+        public void Transition(float alpha)
+        {
+            foreach(MenuItem item in Items)
+            {
+                item.Image.IsActive = true;
+                item.Image.Alpha = alpha;
+                if (alpha == 0.0f) { item.Image.FadeEffect.Increase = true; }
+                else
+                    item.Image.FadeEffect.Increase = false;
             }
         }
 

@@ -122,6 +122,7 @@
     <None Include="Load\ScreenManager.xml" />
     <None Include="Load\Menus\TitleMenu.xml" />
     <None Include="Content\Fonts\FontBoi.spritefont" />
+    <None Include="Load\Menus\TestMenu.xml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

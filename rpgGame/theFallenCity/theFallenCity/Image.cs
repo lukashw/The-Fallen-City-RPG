@@ -81,8 +81,27 @@ namespace theFallenCity
         }
         //image effect methods
 
+        public void StrEffect()
+        {
+            foreach(var effect in effectList)
+            {
+                Effects = string.Empty;
+                if(effect.Value.IsActive)
+                    Effects+= effect.Key + ":"; 
+            }
+            if(Effects != string.Empty)
+            Effects.Remove(Effects.Length - 1);
+        }
+        public  void RstEffect()
+        {
+            foreach(var effect in effectList)
+                DeactivateEffect(effect.Key);
 
-
+            string[] split = Effects.Split(':');
+            foreach (string s in split)
+                ActivateEffect(s);
+            
+        }
      
 
         //loading content

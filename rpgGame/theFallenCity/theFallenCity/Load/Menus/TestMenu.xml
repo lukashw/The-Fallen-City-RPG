@@ -4,28 +4,29 @@
     <Effects>FadeEffect</Effects>
     
     <Item>
+<!--Change link type to screen and link id to spash screen inorder to load splashscreen-->        
         <LinkType>Menu</LinkType>
-        <LinkID>Load/Menus/TestMenu.xml</LinkID>
+        <LinkID>Load/Menus/TitleMenu.xml</LinkID>
         <Image>
-            <Text>New Game </Text>
+            <Text>yeet Game </Text>
         </Image>  
     </Item>
     
     <Item>
         <Image>
-            <Text>Load Game </Text>
+            <Text>beat Game </Text>
         </Image>  
     </Item>
     
     <Item>
         <Image>
-            <Text>Options</Text>
+            <Text>fob</Text>
         </Image>  
     </Item>
     
     <Item>
         <Image>
-            <Text>Credits</Text>
+            <Text>cob</Text>
         </Image>  
     </Item>
        
