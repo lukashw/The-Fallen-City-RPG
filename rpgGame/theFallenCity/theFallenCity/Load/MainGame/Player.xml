@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Player>
+    <Image>
+        <Path>Sprites/PlayerOne</Path>
+    </Image>
+    <MoveSpeed>100</MoveSpeed>
+</Player>

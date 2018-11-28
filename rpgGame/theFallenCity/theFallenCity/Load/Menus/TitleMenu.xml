@@ -4,8 +4,8 @@
     <Effects>FadeEffect</Effects>
     
     <Item>
-        <LinkType>Menu</LinkType>
-        <LinkID>Load/Menus/TestMenu.xml</LinkID>
+        <LinkType>Screen</LinkType>
+        <LinkID>GamePlay</LinkID>
         <Image>
             <Text>New Game </Text>
         </Image>  

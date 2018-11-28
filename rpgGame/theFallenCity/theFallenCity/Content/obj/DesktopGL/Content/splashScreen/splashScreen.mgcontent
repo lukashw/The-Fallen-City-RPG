@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/splashScreen/splashScreen.png</SourceFile>
-  <SourceTime>2018-11-15T09:03:51.674481-05:00</SourceTime>
+  <SourceTime>2018-11-28T16:31:23.519303-05:00</SourceTime>
   <DestFile>/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/bin/DesktopGL/Content/splashScreen/splashScreen.xnb</DestFile>
-  <DestTime>2018-11-15T09:04:13.577445-05:00</DestTime>
+  <DestTime>2018-11-28T16:32:27.023964-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-09-23T17:56:40-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

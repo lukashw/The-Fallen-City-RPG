@@ -1,12 +1,11 @@
 ﻿<Properties StartupConfiguration="{5D854D52-F8E5-45E9-968C-28CABAA6FEA3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="theFallenCity/Load/Menus/TestMenu.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="theFallenCity/Load/splashScreen.xml">
     <Files>
-      <File FileName="theFallenCity/Load/Menus/Menu.cs" Line="43" Column="60" />
-      <File FileName="theFallenCity/Load/Menus/MenuManager.cs" Line="94" Column="45" />
-      <File FileName="theFallenCity/Load/Menus/MenuItem.cs" Line="9" Column="8" />
-      <File FileName="theFallenCity/Load/Menus/TitleMenu.xml" Line="14" Column="11" />
-      <File FileName="theFallenCity/Load/Menus/TestMenu.xml" Line="8" Column="37" />
-      <File FileName="theFallenCity/Image.cs" Line="90" Column="41" />
+      <File FileName="theFallenCity/Image.cs" Line="116" Column="1" />
+      <File FileName="theFallenCity/Load/MainGame/GamePlay.cs" Line="23" Column="34" />
+      <File FileName="theFallenCity/Load/MainGame/Player.xml" Line="4" Column="30" />
+      <File FileName="theFallenCity/Load/MainGame/Player.cs" Line="46" Column="14" />
+      <File FileName="theFallenCity/Load/splashScreen.xml" Line="4" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.theFallenCity PreferredExecutionTarget="MonoDevelop.Default" />
