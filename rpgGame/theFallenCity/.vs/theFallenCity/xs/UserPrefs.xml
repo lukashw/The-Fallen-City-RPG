@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{5D854D52-F8E5-45E9-968C-28CABAA6FEA3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="theFallenCity/Load/MainGame/Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="theFallenCity/SpriteSheetEffect.cs">
     <Files>
-      <File FileName="theFallenCity/Image.cs" Line="162" Column="65" />
-      <File FileName="theFallenCity/Load/MainGame/GamePlay.cs" Line="2" Column="1" />
-      <File FileName="theFallenCity/SpriteSheetEffect.cs" Line="39" Column="48" />
-      <File FileName="theFallenCity/Load/MainGame/Player.xml" Line="5" Column="35" />
-      <File FileName="theFallenCity/Load/MainGame/Player.cs" Line="46" Column="14" />
+      <File FileName="theFallenCity/MapAge/Map.cs" Line="15" Column="30" />
+      <File FileName="theFallenCity/MapAge/Layer.cs" Line="89" Column="9" />
+      <File FileName="theFallenCity/MapAge/Tile.cs" Line="33" Column="1" />
+      <File FileName="theFallenCity/Load/MainGame/Maps/Map1.xml" Line="9" Column="22" />
+      <File FileName="theFallenCity/Image.cs" Line="91" Column="9" />
+      <File FileName="theFallenCity/SpriteSheetEffect.cs" Line="38" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.theFallenCity PreferredExecutionTarget="MonoDevelop.Default" />

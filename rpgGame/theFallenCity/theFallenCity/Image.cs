@@ -81,6 +81,12 @@ namespace theFallenCity
                 effectList[effect].UnloadContent();
             }
         }
+
+        //internal void Update()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         //image effect methods
 
         public void StrEffect()

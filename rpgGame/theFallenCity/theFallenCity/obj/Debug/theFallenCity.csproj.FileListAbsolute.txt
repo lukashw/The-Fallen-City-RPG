@@ -23,3 +23,4 @@
 /Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/theFallenCity.pdb
 /Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/MonoGame.Framework.dll
 /Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/MonoGame.Framework.xml
+/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/magecity.xnb

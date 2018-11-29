@@ -38,7 +38,7 @@ namespace theFallenCity
             AmountFrames = new Vector2(4, 4);
             //starting location of sprite sheet
             CurrentFrame = new Vector2(0, 0);
-            SwitchFrame = 100;
+            SwitchFrame = 80;
 
             FrameCounter = 0;
         }
@@ -68,9 +68,9 @@ namespace theFallenCity
                 }
             }
             else
-                CurrentFrame.X = 1;
+                CurrentFrame.X = 0;
 
-            image.sourceRec = new Rectangle((int)CurrentFrame.X * FrameWidth, (int)CurrentFrame.Y * FrameHeight, FrameWidth, FrameWidth);
+            image.sourceRec = new Rectangle((int)CurrentFrame.X * FrameWidth, (int)CurrentFrame.Y * FrameHeight, FrameWidth, FrameHeight);
 
 
         }

@@ -4,6 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/magecity.png</File>
     <File>/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/moon.spritefont</File>
     <File>/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/ScreenManager/blackBox.png</File>
     <File>/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/splashScreen/splashScreen.png</File>
@@ -11,6 +12,7 @@
     <File>/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/textFonts/FontBoi.spritefont</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
