@@ -35,6 +35,8 @@ namespace theFallenCity
         SpriteFont font;
         //image effect methods
         public FadeEffect FadeEffect;
+        public SpriteSheetEffect SpriteSheetEffect;
+
 
         public Image()
         {
@@ -157,6 +159,7 @@ namespace theFallenCity
 
 
             SetEffect<FadeEffect>(ref FadeEffect);
+            SetEffect<SpriteSheetEffect>(ref SpriteSheetEffect);
             if (Effects != string.Empty) { string[] split = Effects.Split(':');
                 foreach (string item in split) { ActivateEffect(item); }
             }

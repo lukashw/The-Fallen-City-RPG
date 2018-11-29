@@ -59,6 +59,7 @@
     <Compile Include="Load\Menus\MenuManager.cs" />
     <Compile Include="Load\MainGame\GamePlay.cs" />
     <Compile Include="Load\MainGame\Player.cs" />
+    <Compile Include="SpriteSheetEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

@@ -29,30 +29,47 @@ namespace theFallenCity.MainGame
 
         public  void Update(GameTime gametime)
         {
+            Image.IsActive = true;
             //(player movement) if diagonal momvent is wanted then remove the if statements
             if (Velocity.X == 0)
             {
-                if (InputManager.Instance.KeyDown(Keys.S))
-                    //down
+                if (InputManager.Instance.KeyDown(Keys.S)) //down
+                {
                     Velocity.Y = MoveSpeed * (float)gametime.ElapsedGameTime.TotalSeconds;
-                else if (InputManager.Instance.KeyDown(Keys.W))
-                    //up
+                    Image.SpriteSheetEffect.CurrentFrame.Y = 0;
+                }
+                else if (InputManager.Instance.KeyDown(Keys.W))//up
+                {
                     Velocity.Y = -MoveSpeed * (float)gametime.ElapsedGameTime.TotalSeconds;
+                    Image.SpriteSheetEffect.CurrentFrame.Y = 3;
+
+                }
                 else
                     Velocity.Y = 0;
             }
 
-            if(Velocity.Y ==0)
+            if (Velocity.Y == 0)
             {
-            if (InputManager.Instance.KeyDown(Keys.D))
-                //left
-                Velocity.X = MoveSpeed * (float)gametime.ElapsedGameTime.TotalSeconds;
-            else if (InputManager.Instance.KeyDown(Keys.A))
-                //right
-                Velocity.X = -MoveSpeed * (float)gametime.ElapsedGameTime.TotalSeconds;
-            else
+                if (InputManager.Instance.KeyDown(Keys.D))//right
+                {
+                    Velocity.X = MoveSpeed * (float)gametime.ElapsedGameTime.TotalSeconds;
+                    Image.SpriteSheetEffect.CurrentFrame.Y = 2;
+
+                }
+                else if (InputManager.Instance.KeyDown(Keys.A))//left
+                {
+                    Velocity.X = -MoveSpeed * (float)gametime.ElapsedGameTime.TotalSeconds;
+                    Image.SpriteSheetEffect.CurrentFrame.Y = 1;
+
+                }
+                else
                 Velocity.X = 0;
             }
+            if (Velocity.X == 0 && Velocity.Y == 0)
+                Image.IsActive = false;
+
+
+            Image.Update(gametime);
             Image.Position += Velocity;
 
         }
