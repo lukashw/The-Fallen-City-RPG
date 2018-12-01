@@ -23,4 +23,23 @@
         </TileMap>
     </Layer>
     
+    <Layer>
+        <Image><Path>magecity</Path>
+        </Image>
+        <SolidTiles>[5:1][5:2][5:3]</SolidTiles>
+        <TileMap>  
+            <Row>[x:x][x:x][x:x][[x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x]</Row>
+            <Row>[x:x][x:x][x:x][[x:x][5:1][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x]</Row>
+            <Row>[x:x][x:x][x:x][[x:x][5:2][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x]</Row>
+            <Row>[x:x][x:x][x:x][[x:x][5:3][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x]</Row>
+            <Row>[x:x][x:x][x:x][[x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x]</Row>
+            <Row>[x:x][x:x][x:x][[x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x]</Row>
+            <Row>[x:x][x:x][x:x][[x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x]</Row>
+            <Row>[x:x][x:x][x:x][[x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x]</Row>
+            <Row>[x:x][x:x][x:x][[x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x]</Row>
+            <Row>[x:x][x:x][x:x][[x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x]</Row>
+            <Row>[x:x][x:x][x:x][[x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x][x:x]</Row>
+
+        </TileMap>
+    </Layer>
 </Map>

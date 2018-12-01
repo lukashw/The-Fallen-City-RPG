@@ -39,7 +39,7 @@ namespace theFallenCity
         {
             base.Update(gametime);
             player.Update(gametime);
-            map.Update(gametime);
+            map.Update(gametime, ref player);
         }
 
         public override void Draw(SpriteBatch spritebatch)

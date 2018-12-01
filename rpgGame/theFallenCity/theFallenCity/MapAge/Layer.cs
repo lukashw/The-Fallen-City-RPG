@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System.Xml.Serialization;
+using theFallenCity.MainGame;
 
 namespace theFallenCity.MapAge
 {
@@ -28,13 +29,18 @@ namespace theFallenCity.MapAge
 
         [XmlElement("TileMap")]
         public TileMap Tile;
+        public string SolidTiles;
         public Image Image;
         List<Tile> tiles;
+        string state;
+
+
 
         public Layer()
         {
             Image = new Image();
             tiles = new List<Tile>();
+            SolidTiles = string.Empty;
 
         }
 
@@ -60,17 +66,25 @@ namespace theFallenCity.MapAge
                     {
                         position.X += tileDimentions.X;
 
-                        tiles.Add(new Tile());
+                        if (!s.Contains("x"))
+                        {
+                            state = "Passive";
+                            tiles.Add(new Tile());
 
-                        string str = s.Replace("[", String.Empty);
-                        //first tile number value
-                        int value1 = int.Parse(str.Substring(0, str.IndexOf(':')));
-                        //second tile number value
-                        int value2 = int.Parse(str.Substring(str.IndexOf(':') + 1));
+                            string str = s.Replace("[", String.Empty);
+                            //first tile number value
+                            int value1 = int.Parse(str.Substring(0, str.IndexOf(':')));
+                            //second tile number value
+                            int value2 = int.Parse(str.Substring(str.IndexOf(':') + 1));
 
-                        tiles[tiles.Count - 1].LoadContent(position, new Rectangle(
-                            value1 * (int)tileDimentions.X, value2 * (int)tileDimentions.Y, 
-                            (int)tileDimentions.X, (int)tileDimentions.Y));
+                            //colosion for game
+                            if (SolidTiles.Contains("[" + value1.ToString() + ":" + value2.ToString() + "]"))
+                                state = "Solid";
+
+                            tiles[tiles.Count - 1].LoadContent(position, new Rectangle(
+                                value1 * (int)tileDimentions.X, value2 * (int)tileDimentions.Y,
+                                (int)tileDimentions.X, (int)tileDimentions.Y), state);
+                        }
 
                     }
                 }
@@ -82,9 +96,10 @@ namespace theFallenCity.MapAge
             Image.UnloadContent();
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime, ref Player player)
         {
-           
+            foreach (Tile tile in tiles)
+                tile.Update(gameTime, ref player);
         }
 
         public void Draw(SpriteBatch spriteBatch)

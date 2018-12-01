@@ -4,9 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System.Xml.Serialization;
-
-
-
+using theFallenCity.MainGame;
 
 namespace theFallenCity.MapAge
 {
@@ -35,10 +33,10 @@ namespace theFallenCity.MapAge
                 l.UnloadContent();
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime, ref Player player)
         {
             foreach (Layer l in Layer)
-                l.Update(gameTime);
+                l.Update(gameTime, ref player);
 
         }
 
