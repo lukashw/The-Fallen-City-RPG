@@ -2,6 +2,10 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Media;
 
 namespace theFallenCity
 {
@@ -9,6 +13,10 @@ namespace theFallenCity
     {
         Menu menu;
         bool isTransitioning;
+        public SoundEffect MenusC;
+        ContentManager ContentP = Game1.MyContent;
+        List<SoundEffect> soundEffects;
+
 
         void Transition(GameTime gameTime)
         {
@@ -36,8 +44,12 @@ namespace theFallenCity
 
         public MenuManager()
         {
+            ContentP.RootDirectory = "Content";
+
             menu = new Menu();
             menu.OnMenuChange +=  menu_OnMenuChange;
+            soundEffects = new List<SoundEffect>();
+
 
         }
 
@@ -61,7 +73,12 @@ namespace theFallenCity
 
         public void LoadContent(String menuPath)
         {
-            if(menuPath != string.Empty)
+
+            soundEffects = new List<SoundEffect>();
+            soundEffects.Add(ContentP.Load<SoundEffect>("Audio/Effects/GameStarter"));
+
+
+            if (menuPath != string.Empty)
             {
                 menu.ID = menuPath;
             }
@@ -81,6 +98,11 @@ namespace theFallenCity
             //enter is pressed on a menu item
             if (InputManager.Instance.KeyPressed(Keys.Enter) && !isTransitioning)
             {
+                //Play SoundEffect
+                soundEffects[0].Play();
+                //figure out a game music stop
+                MediaPlayer.Stop();
+
 
                 if (menu.Items[menu.ItemNumber].LinkType == "Screen")
                     ScreenManager.instance.ScreenChange(menu.Items[menu.ItemNumber].LinkID);

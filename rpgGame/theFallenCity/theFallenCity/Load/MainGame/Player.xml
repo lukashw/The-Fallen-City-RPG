@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Player>
     <Image>
-        <Path>Sprites/PlayerOne</Path>
+        <Path>Sprites/TileSheet/Nwiz</Path>
         <Effects>SpriteSheetEffect</Effects>
     </Image>
     <MoveSpeed>100</MoveSpeed>

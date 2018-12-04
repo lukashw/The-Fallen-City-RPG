@@ -6,11 +6,16 @@ using System.Xml.Serialization;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
+
 
 namespace theFallenCity
 {
     public class Menu
     {
+      
+
+
         //Events
         public event EventHandler OnMenuChange;
 
@@ -97,7 +102,15 @@ namespace theFallenCity
 
             }
             alignMenuItems();
+
+
+
         }
+
+
+
+
+   
 
         public void UnloadContent()
         {

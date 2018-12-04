@@ -1,6 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
 namespace theFallenCity
@@ -12,11 +16,16 @@ namespace theFallenCity
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        
+        Song MenuSong;
+        List<SoundEffect> soundEffects;
+
+        public static ContentManager MyContent;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            MyContent = Content;
         }
 
         /// <summary>
@@ -46,8 +55,27 @@ namespace theFallenCity
             ScreenManager.Instance.GraphicsDevice = GraphicsDevice;
             ScreenManager.Instance.SpriteBatch = spriteBatch;
             ScreenManager.Instance.LoadContent(Content);
-            // TODO: use this.Content to load your game content here
+            //audio
+            soundEffects = new List<SoundEffect>();
+
+            soundEffects.Add(MyContent.Load<SoundEffect>("Audio/Effects/GameStarter"));
+            this.MenuSong = MyContent.Load<Song>("Audio/Theme");
+            MediaPlayer.Play(MenuSong);
+
+            //  MediaPlayer.IsRepeating = true;
+            MediaPlayer.MediaStateChanged += MediaPlayer_MediaStateChanged;
+
+
         }
+
+        void MediaPlayer_MediaStateChanged(object sender, System.EventArgs e)
+        {
+            MediaPlayer.Volume -= 0.1f;
+            MediaPlayer.Play(MenuSong);
+        }
+
+
+      
 
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
@@ -82,7 +110,7 @@ namespace theFallenCity
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Blue);
+            GraphicsDevice.Clear(Color.Black);
             spriteBatch.Begin();
             // TODO: Add your drawing code here
             ScreenManager.Instance.Draw(spriteBatch);

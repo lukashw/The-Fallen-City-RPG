@@ -134,6 +134,10 @@
     <None Include="Content\Sprites\PlayerOne.png" />
     <None Include="Load\MainGame\Maps\Map1.xml" />
     <None Include="Content\Sprites\TileSheet\magecity.png" />
+    <None Include="Content\Sprites\Mwiz.png" />
+    <None Include="Content\Sprites\TileSheet\Nwiz.png" />
+    <None Include="Content\Audio\Theme.mp3" />
+    <None Include="Content\Audio\Effects\GameStarter.wav" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -152,6 +156,8 @@
     <Folder Include="MapAge\" />
     <Folder Include="Load\MainGame\Maps\" />
     <Folder Include="Content\Sprites\TileSheet\" />
+    <Folder Include="Content\Audio\" />
+    <Folder Include="Content\Audio\Effects\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

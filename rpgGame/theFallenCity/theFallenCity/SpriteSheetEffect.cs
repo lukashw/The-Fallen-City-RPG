@@ -35,7 +35,7 @@ namespace theFallenCity
         public SpriteSheetEffect()
         {
             //size of sprite sheet
-            AmountFrames = new Vector2(4, 4);
+            AmountFrames = new Vector2(3, 4);
             //starting location of sprite sheet
             CurrentFrame = new Vector2(0, 0);
             SwitchFrame = 80;

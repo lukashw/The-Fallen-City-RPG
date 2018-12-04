@@ -13,6 +13,18 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Audio/Effects/GameStarter.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Effects/GameStarter.wav
+
+#begin Audio/Theme.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Audio/Theme.mp3
+
 #begin magecity.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -56,6 +68,18 @@
 /processorParam:TextureFormat=Color
 /build:splashScreen/splashScreen.png
 
+#begin Sprites/Mwiz.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Mwiz.png
+
 #begin Sprites/PlayerOne.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -67,6 +91,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/PlayerOne.png
+
+#begin Sprites/TileSheet/Nwiz.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/TileSheet/Nwiz.png
 
 #begin textFonts/FontBoi.spritefont
 /importer:FontDescriptionImporter

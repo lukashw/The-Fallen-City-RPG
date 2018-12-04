@@ -24,3 +24,9 @@
 /Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/MonoGame.Framework.dll
 /Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/MonoGame.Framework.xml
 /Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/magecity.xnb
+/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/obj/Debug/theFallenCity.csprojAssemblyReference.cache
+/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/Sprites/Mwiz.xnb
+/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/Sprites/TileSheet/Nwiz.xnb
+/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/Audio/Theme.ogg
+/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/Audio/Theme.xnb
+/Users/lukashensel-williams/Documents/The-Fallen-City-RPG/rpgGame/theFallenCity/theFallenCity/Content/Audio/Effects/GameStarter.xnb
