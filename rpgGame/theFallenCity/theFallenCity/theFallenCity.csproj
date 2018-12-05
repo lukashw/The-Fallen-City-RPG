@@ -138,6 +138,8 @@
     <None Include="Content\Sprites\TileSheet\Nwiz.png" />
     <None Include="Content\Audio\Theme.mp3" />
     <None Include="Content\Audio\Effects\GameStarter.wav" />
+    <None Include="Content\Sprites\TileSheet\Terra.png" />
+    <None Include="Content\Sprites\TileSheet\Terra2.png" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

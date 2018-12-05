@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{5D854D52-F8E5-45E9-968C-28CABAA6FEA3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="theFallenCity/Image.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="theFallenCity/Load/MainGame/Player.cs">
     <Files>
-      <File FileName="theFallenCity/Load/Menus/Menu.cs" Line="131" Column="17" />
-      <File FileName="theFallenCity/Game1.cs" Line="28" Column="22" />
-      <File FileName="theFallenCity/Load/MainGame/GamePlay.cs" Line="17" Column="51" />
-      <File FileName="theFallenCity/Image.cs" Line="46" Column="23" />
+      <File FileName="theFallenCity/Load/MainGame/Player.cs" Line="29" Column="1" />
+      <File FileName="theFallenCity/Load/MainGame/Maps/Map1.xml" Line="40" Column="37" />
+      <File FileName="theFallenCity/Load/MainGame/GamePlay.cs" Line="37" Column="29" />
+      <File FileName="theFallenCity/Load/MainGame/Player.xml" Line="6" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.theFallenCity PreferredExecutionTarget="MonoDevelop.Default" />

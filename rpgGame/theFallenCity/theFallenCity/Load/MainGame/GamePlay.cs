@@ -5,7 +5,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using theFallenCity.MainGame;
 using theFallenCity.MapAge;
-using Microsoft.Xna.Framework.Content;
 
 
 namespace theFallenCity
@@ -13,14 +12,14 @@ namespace theFallenCity
 
     public class GamePlay: gameScreen
     {
-        TimeSpan timeSpan = TimeSpan.FromSeconds(2000);
-        ContentManager ContentP = Game1.MyContent;
+        bool gameGunning = true;
         Player player;
         Map map;
         //timer
-        TimeSpan bombTimer = TimeSpan.Zero;
+        TimeSpan GTimer = TimeSpan.Zero;
         public string Text, FontNames, Path;
         SpriteFont font;
+        double levelScore = 50000;
 
 
 
@@ -58,20 +57,40 @@ namespace theFallenCity
             player.Update(gametime);
             map.Update(gametime, ref player);
 
-            bombTimer += gametime.ElapsedGameTime;
+
+            if (gameGunning==true)
+            {
+                GTimer += gametime.ElapsedGameTime;
+
+                if (levelScore > 0)
+                    levelScore = levelScore - 0.5;
+
+            }
+            //Pausing the game
+            if (InputManager.Instance.KeyPressed(Keys.P))
+                gameGunning = false;
+            else gameGunning |= InputManager.Instance.KeyReleased(Keys.P);
+
 
 
 
 
         }
 
+
+
+
         public override void Draw(SpriteBatch spritebatch)
         {
             base.Draw(spritebatch);
             map.Draw(spritebatch);
             player.Draw(spritebatch);
+            if (gameGunning == false)
+                spritebatch.DrawString(font, "Paused " , new Vector2(10, 215), Color.Red);
 
-            spritebatch.DrawString(font, bombTimer.ToString(), new Vector2(10, 10), Color.White);
+
+            spritebatch.DrawString(font, "Time "+ GTimer.ToString(), new Vector2(10, 415), Color.White);
+            spritebatch.DrawString(font,"Current score " + levelScore.ToString(), new Vector2(10, 435), Color.Blue);
 
         }
     }

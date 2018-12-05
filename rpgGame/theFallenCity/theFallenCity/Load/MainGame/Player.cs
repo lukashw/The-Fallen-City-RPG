@@ -11,15 +11,20 @@ namespace theFallenCity.MainGame
         public Vector2 Velocity;
         public Image Image;
         public float MoveSpeed;
+        //public string Text, FontNames, Path;
+
 
         public Player()
         {
             Velocity = Vector2.Zero;
+
         }
 
         public void LoadContent()
         {
+
             Image.LoadContent();
+
         }
 
         public  void UnloadContent()
@@ -77,6 +82,8 @@ namespace theFallenCity.MainGame
         public  void Draw(SpriteBatch spritebatch)
         {
             Image.Draw(spritebatch);
+
+
         }
     }
 }

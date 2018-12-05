@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Player>
+   
     <Image>
+         <Position>
+        <X>530</X>
+        <Y>50</Y>
+    </Position>
         <Path>Sprites/TileSheet/Nwiz</Path>
         <Effects>SpriteSheetEffect</Effects>
     </Image>
