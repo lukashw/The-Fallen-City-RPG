@@ -9,9 +9,17 @@ namespace theFallenCity.MapAge
     public class Tile
     {
 
+        //Text boy
+        TimeSpan GTimer = TimeSpan.Zero;
+
+        public bool GameWin { get; set; }
+        
         Vector2 position;
         Rectangle sourceRect;
         string state;
+
+     
+
         public Rectangle SourceRect
         {
             get { return sourceRect; }
@@ -25,15 +33,20 @@ namespace theFallenCity.MapAge
 
         public Tile()
         {
+            GameWin = false;
         }
 
 
 
         public void LoadContent(Vector2 position, Rectangle sourceRect, string state)
         {
+
             this.position = position;
             this.sourceRect = sourceRect;
             this.state = state;
+
+            //square
+
 
         }
         public void UnloadContent()
@@ -42,12 +55,14 @@ namespace theFallenCity.MapAge
         }
 
 
-        public void Update(GameTime gameTime, ref Player player)
+        internal void Update(GameTime gameTime, ref Player player)
         {
             if (state == "Solid")
             {
-                Rectangle tileRect = new Rectangle((int)Position.X,(int)Position.Y, SourceRect.Width, SourceRect.Height);
-                Rectangle playerRect = new Rectangle((int)player.Image.Position.X, (int)player.Image.Position.Y, player.Image.sourceRec.Width, player.Image.sourceRec.Height);
+                Rectangle tileRect = new Rectangle((int)Position.X, (int)Position.Y, SourceRect.Width, SourceRect.Height);
+                Rectangle playerRect = new Rectangle((int)player.Image.Position.X, (int)player.Image.Position.Y, 
+                                                     player.Image.sourceRec.Width, player.Image.sourceRec.Height);
+                
 
                 if (playerRect.Intersects(tileRect))
                 {
@@ -62,9 +77,11 @@ namespace theFallenCity.MapAge
 
                     player.Velocity = Vector2.Zero;
                 }
+
+
             }
         }
 
-       
+      
     }
 }

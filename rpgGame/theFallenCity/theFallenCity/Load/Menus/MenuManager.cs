@@ -16,8 +16,7 @@ namespace theFallenCity
         public SoundEffect MenusC;
         ContentManager ContentP = Game1.MyContent;
         List<SoundEffect> soundEffects;
-
-
+     
         void Transition(GameTime gameTime)
         {
             if(isTransitioning)
@@ -35,7 +34,9 @@ namespace theFallenCity
                     {
                         isTransitioning = false;
                         foreach (MenuItem item in menu.Items)
+                        {
                             item.Image.RstEffect();
+                        }
                     }
                 }
             }
@@ -51,7 +52,8 @@ namespace theFallenCity
             soundEffects = new List<SoundEffect>();
 
 
-        }
+
+    }
 
         void menu_OnMenuChange(object sender, EventArgs e)
         {

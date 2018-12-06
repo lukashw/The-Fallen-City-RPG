@@ -36,6 +36,8 @@ namespace theFallenCity
         //image effect methods
         public FadeEffect FadeEffect;
         public SpriteSheetEffect SpriteSheetEffect;
+        //Text
+
 
 
         public Image()
@@ -49,6 +51,7 @@ namespace theFallenCity
             Alpha = 1.0f;
             sourceRec = Rectangle.Empty;
             effectList = new Dictionary<string, ImageEffect>();
+           
         }
 
         void SetEffect<T>(ref T effect)
@@ -100,6 +103,8 @@ namespace theFallenCity
             if(Effects != string.Empty)
             Effects.Remove(Effects.Length - 1);
         }
+
+
         public  void RstEffect()
         {
             foreach(var effect in effectList)
@@ -170,6 +175,8 @@ namespace theFallenCity
                 foreach (string item in split) { ActivateEffect(item); }
             }
             //end of load
+            font = content.Load<SpriteFont>(FontNames);
+
         }
         //unloading content
         public virtual void UnloadContent()
@@ -186,13 +193,18 @@ namespace theFallenCity
                 if (effect.Value.IsActive) { effect.Value.Update(gameTime);
                 }
             }
+         
         }
         //public draw spritebatch
         public void Draw(SpriteBatch spriteBatch)
         {
+
             //getting center point of image
             origin = new Vector2(sourceRec.Width / 2, sourceRec.Height / 2);
             spriteBatch.Draw(texture, Position + origin, sourceRec, Color.White * Alpha, 0.0f, origin,Scale, SpriteEffects.None, 0.0f);
+
+
+
         }
 
 

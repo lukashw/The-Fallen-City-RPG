@@ -12,6 +12,8 @@ namespace theFallenCity
 
     public class GamePlay: gameScreen
     {
+        Texture2D whiteRectangle;
+
         bool gameGunning = true;
         Player player;
         Map map;
@@ -20,20 +22,18 @@ namespace theFallenCity
         public string Text, FontNames, Path;
         SpriteFont font;
         double levelScore = 50000;
-
+       // public static bool GameWin = false;
 
 
         //timer end
 
         public GamePlay()
-        {
-            FontNames = "textFonts/FontBoi";
-
-        }
+        {FontNames = "textFonts/FontBoi";}
 
 
         public override void LoadContent()
         {
+
             base.LoadContent();
             font = content.Load<SpriteFont>(FontNames);
             xmlManger<Player> playerLoader = new xmlManger<Player>();
@@ -42,6 +42,7 @@ namespace theFallenCity
             map = mapLoader.Load("Load/MainGame/Maps/Map1.xml");
             player.LoadContent();
             map.LoadContent();
+            whiteRectangle.SetData(new[] { Color.White });
         }
 
         public override void UnloadContent()
@@ -88,9 +89,15 @@ namespace theFallenCity
             if (gameGunning == false)
                 spritebatch.DrawString(font, "Paused " , new Vector2(10, 215), Color.Red);
 
-
             spritebatch.DrawString(font, "Time "+ GTimer.ToString(), new Vector2(10, 415), Color.White);
             spritebatch.DrawString(font,"Current score " + levelScore.ToString(), new Vector2(10, 435), Color.Red);
+            // spritebatch.DrawString(font, "Current score " + (int)Image.Position.X, new Vector2(10, 435), Color.Red);
+            spritebatch.Draw(whiteRectangle, new Rectangle(10, 20, 80, 30),Color.Chocolate);
+
+            // spritebatch.DrawString(font, "You won " + Tile.PlayLoc, new Vector2(200, 300), Color.Green);
+
+
+
 
         }
     }

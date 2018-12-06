@@ -4,31 +4,25 @@
     <Effects>FadeEffect</Effects>
     
     <Item>
-        <LinkType>Screen</LinkType>
-        <LinkID>GamePlay</LinkID>
+        <LinkType>Menu</LinkType>
+        <LinkID>Load/Menus/LevelSelect.xml</LinkID>
         <Image>
-            <Text>New Game </Text>
+            <Text>Choose level</Text>
         </Image>  
     </Item>
     
-    <Item>
+    
+             <Item>
              <LinkType>Screen</LinkType>
             <LinkID>HelpScreen</LinkID>
-
         <Image>
             <Text>Help</Text>
         </Image>  
-    </Item>
-    
-    <Item>
-        <Image>
-            <Text>Options</Text>
-        </Image>  
-    </Item>
+             </Item>
     
     <Item>
         <LinkType>Menu</LinkType>
-            <LinkID>Load/Menus/TestMenu.xml</LinkID>
+            <LinkID>Load/Menus/Credits.xml</LinkID>
         <Image>
             <Text>Credits</Text>
         </Image>  

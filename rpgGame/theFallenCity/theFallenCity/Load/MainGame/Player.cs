@@ -3,6 +3,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using theFallenCity.MainGame;
+using theFallenCity.MapAge;
+
 
 namespace theFallenCity.MainGame
 {
@@ -11,8 +14,6 @@ namespace theFallenCity.MainGame
         public Vector2 Velocity;
         public Image Image;
         public float MoveSpeed;
-        //public string Text, FontNames, Path;
-
 
         public Player()
         {

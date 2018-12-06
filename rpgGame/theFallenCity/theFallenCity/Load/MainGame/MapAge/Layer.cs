@@ -80,6 +80,7 @@ namespace theFallenCity.MapAge
                             //colosion for game
                             if (SolidTiles.Contains("[" + value1.ToString() + ":" + value2.ToString() + "]"))
                                 state = "Solid";
+                            //Collecting shroom
 
                             tiles[tiles.Count - 1].LoadContent(position, new Rectangle(
                                 value1 * (int)tileDimentions.X, value2 * (int)tileDimentions.Y,
