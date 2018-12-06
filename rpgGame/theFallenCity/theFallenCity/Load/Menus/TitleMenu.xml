@@ -12,8 +12,11 @@
     </Item>
     
     <Item>
+             <LinkType>Screen</LinkType>
+            <LinkID>HelpScreen</LinkID>
+
         <Image>
-            <Text>Load Game </Text>
+            <Text>Help</Text>
         </Image>  
     </Item>
     
@@ -24,6 +27,8 @@
     </Item>
     
     <Item>
+        <LinkType>Menu</LinkType>
+            <LinkID>Load/Menus/TestMenu.xml</LinkID>
         <Image>
             <Text>Credits</Text>
         </Image>  

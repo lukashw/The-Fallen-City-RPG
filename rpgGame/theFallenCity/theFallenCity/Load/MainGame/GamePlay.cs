@@ -90,7 +90,7 @@ namespace theFallenCity
 
 
             spritebatch.DrawString(font, "Time "+ GTimer.ToString(), new Vector2(10, 415), Color.White);
-            spritebatch.DrawString(font,"Current score " + levelScore.ToString(), new Vector2(10, 435), Color.Blue);
+            spritebatch.DrawString(font,"Current score " + levelScore.ToString(), new Vector2(10, 435), Color.Red);
 
         }
     }

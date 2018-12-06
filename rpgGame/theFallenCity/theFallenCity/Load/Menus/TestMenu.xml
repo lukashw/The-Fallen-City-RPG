@@ -5,28 +5,35 @@
     
     <Item>
 <!--Change link type to screen and link id to spash screen inorder to load splashscreen-->        
+        
+        <Image>
+            <LinkType>Menu</LinkType>
+        <LinkID>Load/Menus/TitleMenu.xml</LinkID>
+            <Text>The lost City</Text>
+        </Image>  
+    </Item>
+    
+    <Item>
         <LinkType>Menu</LinkType>
         <LinkID>Load/Menus/TitleMenu.xml</LinkID>
         <Image>
-            <Text>yeet Game </Text>
+            <Text>This game was created by Lukas H-W </Text>
         </Image>  
     </Item>
     
     <Item>
+        <LinkType>Menu</LinkType>
+        <LinkID>Load/Menus/TitleMenu.xml</LinkID>
         <Image>
-            <Text>beat Game </Text>
+            <Text>2018</Text>
         </Image>  
     </Item>
     
     <Item>
+        <LinkType>Menu</LinkType>
+        <LinkID>Load/Menus/TitleMenu.xml</LinkID>
         <Image>
-            <Text>fob</Text>
-        </Image>  
-    </Item>
-    
-    <Item>
-        <Image>
-            <Text>cob</Text>
+            <Text>Go back</Text>
         </Image>  
     </Item>
        

@@ -63,6 +63,7 @@
     <Compile Include="MapAge\Map.cs" />
     <Compile Include="MapAge\Layer.cs" />
     <Compile Include="MapAge\Tile.cs" />
+    <Compile Include="HelpScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
