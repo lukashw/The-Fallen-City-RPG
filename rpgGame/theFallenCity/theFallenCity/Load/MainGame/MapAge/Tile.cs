@@ -6,14 +6,13 @@ using theFallenCity.MainGame;
 
 namespace theFallenCity.MapAge
 {
-    public class Tile
+    public class Tile:GamePlay
     {
+
 
         //Text boy
         TimeSpan GTimer = TimeSpan.Zero;
 
-        public bool GameWin { get; set; }
-        
         Vector2 position;
         Rectangle sourceRect;
         string state;
@@ -31,11 +30,7 @@ namespace theFallenCity.MapAge
             get { return position; }
         }
 
-        public Tile()
-        {
-            GameWin = false;
-        }
-
+      
 
 
         public void LoadContent(Vector2 position, Rectangle sourceRect, string state)
@@ -49,20 +44,31 @@ namespace theFallenCity.MapAge
 
 
         }
-        public void UnloadContent()
-        {
-
-        }
+      
 
 
         internal void Update(GameTime gameTime, ref Player player)
         {
-            if (state == "Solid")
+            //Rectangle playerLoc = new Rectangle((int)player.Image.Position.X, (int)player.Image.Position.Y,
+            //                                         player.Image.sourceRec.Width, player.Image.sourceRec.Height);
+            ////Player location
+            //Rectangle TempLoc = new Rectangle(530, 50, SourceRect.Width, SourceRect.Height);
+
+
+            //if (playerLoc.Intersects(TempLoc))
+            //{
+              //  GameWin = true;
+              //}
+
+                // PlayerLoc = TempLoc;
+
+
+
+                if (state == "Solid")
             {
                 Rectangle tileRect = new Rectangle((int)Position.X, (int)Position.Y, SourceRect.Width, SourceRect.Height);
                 Rectangle playerRect = new Rectangle((int)player.Image.Position.X, (int)player.Image.Position.Y, 
                                                      player.Image.sourceRec.Width, player.Image.sourceRec.Height);
-                
 
                 if (playerRect.Intersects(tileRect))
                 {
@@ -80,7 +86,8 @@ namespace theFallenCity.MapAge
 
 
             }
-        }
+        }//End of update
+
 
       
     }

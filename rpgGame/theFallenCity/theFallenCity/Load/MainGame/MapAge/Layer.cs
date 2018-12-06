@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System.Xml.Serialization;
 using theFallenCity.MainGame;
+using Microsoft.Xna.Framework.Input;
 
 namespace theFallenCity.MapAge
 {
@@ -27,12 +28,22 @@ namespace theFallenCity.MapAge
 
         }
 
+     
+
+        //text
+        public string Text, FontNames, Path;
+        SpriteFont font;
+        ContentManager ContentP = Game1.MyContent;
+
+
+
         [XmlElement("TileMap")]
         public TileMap Tile;
         public string SolidTiles;
         public Image Image;
         List<Tile> tiles;
         string state;
+        public bool GameWin = false;
 
 
 
@@ -41,6 +52,8 @@ namespace theFallenCity.MapAge
             Image = new Image();
             tiles = new List<Tile>();
             SolidTiles = string.Empty;
+            ContentP.RootDirectory = "Content";
+            FontNames = "textFonts/FontBoi";
 
         }
 
@@ -51,6 +64,8 @@ namespace theFallenCity.MapAge
 
         public void LoadContent(Vector2 tileDimentions)
         {
+            font = ContentP.Load<SpriteFont>(FontNames);
+
             Image.LoadContent();
             Vector2 position = -tileDimentions; //new Vector2(32, 32);
 
@@ -101,6 +116,18 @@ namespace theFallenCity.MapAge
         {
             foreach (Tile tile in tiles)
                 tile.Update(gameTime, ref player);
+
+            Rectangle playerLoc = new Rectangle((int)player.Image.Position.X, (int)player.Image.Position.Y,
+                                                    player.Image.sourceRec.Width, player.Image.sourceRec.Height);
+            //Player location
+            Rectangle TempLoc = new Rectangle(100, 50, 5, 5);
+
+
+            if (playerLoc.Intersects(TempLoc))
+            {
+                GameWin = true;
+            }
+
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -111,6 +138,17 @@ namespace theFallenCity.MapAge
                 Image.sourceRec = tile.SourceRect;
                 Image.Draw(spriteBatch);
             }
+
+
+            if (GameWin == true)
+            {
+                spriteBatch.DrawString(font, "You won press space to advance", new Vector2(5, 215), Color.Green);
+                if (InputManager.Instance.KeyPressed(Keys.Space))
+                {
+                    ScreenManager.Instance.ScreenChange("TitleScreen");
+                }
+            }
+
 
         }
     }

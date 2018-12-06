@@ -14,6 +14,7 @@ namespace theFallenCity.MainGame
         public Vector2 Velocity;
         public Image Image;
         public float MoveSpeed;
+        public bool Isworking = false;
 
         public Player()
         {

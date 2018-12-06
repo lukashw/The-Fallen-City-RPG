@@ -79,7 +79,10 @@ namespace theFallenCity
         public void Update(GameTime gameTime, ref Player player)
         {
           
-           
+            if (player.Isworking == true)
+            {
+                GameWins = true;
+            }
 
         }
 

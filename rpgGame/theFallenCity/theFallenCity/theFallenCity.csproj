@@ -142,6 +142,7 @@
     <None Include="Content\Sprites\TileSheet\Terra.png" />
     <None Include="Content\Sprites\TileSheet\Terra2.png" />
     <None Include="Load\Menus\LevelSelect.xml" />
+    <None Include="Load\MainGame\Maps\Map2.xml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
