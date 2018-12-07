@@ -56,7 +56,7 @@ namespace theFallenCity
             base.Update(gametime);
             image.Update(gametime);
 
-            if (InputManager.Instance.KeyPressed(Keys.Space))
+            if (InputManager.Instance.KeyPressed(Keys.Enter))
             {
                 ScreenManager.Instance.ScreenChange("TitleScreen");
             }
@@ -70,7 +70,7 @@ namespace theFallenCity
 
 
             spritebatch.DrawString(font, "Your movement is W, A, S, D. Collect the mushroom to win. ", new Vector2(30, 100), Color.Red);
-            spritebatch.DrawString(font, "Press space to go back to he menu. ", new Vector2(30, 300), Color.AliceBlue);
+            spritebatch.DrawString(font, "Press Enter to go back to he menu. ", new Vector2(30, 300), Color.AliceBlue);
 
         }
 

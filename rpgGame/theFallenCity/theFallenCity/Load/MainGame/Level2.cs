@@ -105,9 +105,13 @@ namespace theFallenCity
 
 
             if (GameWins == true)
-                spritebatch.DrawString(font, "You won ", new Vector2(10, 215), Color.Red);
-
-
+            {
+                spritebatch.DrawString(font, "You won Press Enter to advance", new Vector2(10, 215), Color.Red);
+                if (InputManager.Instance.KeyPressed(Keys.Enter))
+                {
+                    ScreenManager.Instance.ScreenChange("TitleScreen");
+                }
+            }
 
 
 

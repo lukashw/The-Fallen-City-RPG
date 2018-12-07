@@ -47,7 +47,7 @@ namespace theFallenCity
 
             base.Update(gametime);
             image.Update(gametime);
-            if(InputManager.Instance.KeyPressed(Keys.Space)){
+            if(InputManager.Instance.KeyPressed(Keys.Enter)){
                 ScreenManager.Instance.ScreenChange("TitleScreen");
             }
            
@@ -56,9 +56,9 @@ namespace theFallenCity
         public override void Draw(SpriteBatch spritebatch)
         {
             image.Draw(spritebatch);
-            spritebatch.DrawString(font, "This game was created by Lukas Hensel-Williams", new Vector2(10, 30), Color.Red);
-            spritebatch.DrawString(font, "Made for game programing 2018 ", new Vector2(30, 50), Color.Green);
-            spritebatch.DrawString(font, "Press the spacebar to go back to the main menu ", new Vector2(30, 80), Color.Green);
+            spritebatch.DrawString(font, "This game was created by Lukas Hensel-Williams", new Vector2(60, 100), Color.DarkRed);
+            spritebatch.DrawString(font, "Made for game programing 2018 ", new Vector2(90, 400), Color.IndianRed);
+            spritebatch.DrawString(font, "Press the Enter to go back to the main menu ", new Vector2(30, 300), Color.PaleVioletRed);
 
 
         }

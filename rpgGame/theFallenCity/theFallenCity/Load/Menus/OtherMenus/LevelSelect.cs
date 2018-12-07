@@ -54,6 +54,12 @@ namespace theFallenCity
             {
                 ScreenManager.Instance.ScreenChange("Level2");
             }
+            if (InputManager.Instance.KeyPressed(Keys.Enter))
+            {
+                ScreenManager.Instance.ScreenChange("TitleScreen");
+            }
+
+
         }
 
         public override void Draw(SpriteBatch spritebatch)
@@ -61,6 +67,7 @@ namespace theFallenCity
             image.Draw(spritebatch);
             spritebatch.DrawString(font, "Press number one to go to the first level ", new Vector2(10, 30), Color.Red);
             spritebatch.DrawString(font, "Press number Two to go to the Second level ", new Vector2(30, 50), Color.Green);
+            spritebatch.DrawString(font, "Press the Enter to go back to the main menu ", new Vector2(30, 300), Color.PaleVioletRed);
 
         }
     }

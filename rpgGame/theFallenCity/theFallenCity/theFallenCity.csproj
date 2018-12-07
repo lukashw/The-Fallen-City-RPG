@@ -59,7 +59,6 @@
     <Compile Include="Load\MainGame\GamePlay.cs" />
     <Compile Include="Load\MainGame\Player.cs" />
     <Compile Include="SpriteSheetEffect.cs" />
-    <Compile Include="HelpScreen.cs" />
     <Compile Include="Load\Menus\MenuManger\subScreen.cs" />
     <Compile Include="Load\MainGame\MapAge\Layer.cs" />
     <Compile Include="Load\MainGame\MapAge\Map.cs" />
@@ -67,6 +66,7 @@
     <Compile Include="Load\MainGame\Level2.cs" />
     <Compile Include="Load\Menus\OtherMenus\LevelSelect.cs" />
     <Compile Include="Load\Menus\OtherMenus\Credits.cs" />
+    <Compile Include="Load\Menus\OtherMenus\HelpScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

@@ -47,7 +47,8 @@ namespace theFallenCity
 
             base.Update(gametime);
             image.Update(gametime);
-            if(InputManager.Instance.KeyPressed(Keys.Space,Keys.Z)){
+            if (InputManager.Instance.KeyPressed(Keys.Enter))
+            {
                 ScreenManager.Instance.ScreenChange("TitleScreen");
             }
         }
@@ -55,7 +56,7 @@ namespace theFallenCity
         public override void Draw(SpriteBatch spritebatch)
         {
             image.Draw(spritebatch);
-            spritebatch.DrawString(font, "Press Space to continue ", new Vector2(400, 435), Color.Red);
+            spritebatch.DrawString(font, "Press Enter to continue ", new Vector2(400, 435), Color.Red);
 
         }
     }
