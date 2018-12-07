@@ -158,6 +158,7 @@ namespace theFallenCity
         {
             foreach (MenuItem item in Items)
                 item.Image.Draw(spriteBatch);
+
         }
       
     }

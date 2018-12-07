@@ -74,6 +74,12 @@ namespace theFallenCity
                 gameGunning = false;
             else gameGunning |= InputManager.Instance.KeyReleased(Keys.P);
 
+
+
+            if (InputManager.Instance.KeyPressed(Keys.M))
+                ScreenManager.Instance.ScreenChange("TitleScreen");
+
+
         }
 
         public void Update(GameTime gameTime, ref Player player)

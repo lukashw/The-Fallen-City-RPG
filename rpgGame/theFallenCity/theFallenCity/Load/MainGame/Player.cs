@@ -35,7 +35,11 @@ namespace theFallenCity.MainGame
         }
 
         public  void Update(GameTime gametime)
+
         {
+           
+
+
             Image.IsActive = true;
             //(player movement) if diagonal momvent is wanted then remove the if statements
             if (Velocity.X == 0)
