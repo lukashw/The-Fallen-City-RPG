@@ -15,7 +15,7 @@
     
      <Item>
         <LinkType>Screen</LinkType>
-        <LinkID>GamePlay</LinkID>
+        <LinkID>Level2</LinkID>
         <Image>
             <Text>level Number Two</Text>
         </Image>  

@@ -145,7 +145,7 @@ namespace theFallenCity.MapAge
                 spriteBatch.DrawString(font, "You won press space to advance", new Vector2(5, 215), Color.Green);
                 if (InputManager.Instance.KeyPressed(Keys.Space))
                 {
-                    ScreenManager.Instance.ScreenChange("TitleScreen");
+                    ScreenManager.Instance.ScreenChange("Level2");
                 }
             }
 

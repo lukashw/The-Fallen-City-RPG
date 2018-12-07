@@ -64,6 +64,7 @@
     <Compile Include="Load\MainGame\MapAge\Layer.cs" />
     <Compile Include="Load\MainGame\MapAge\Map.cs" />
     <Compile Include="Load\MainGame\MapAge\Tile.cs" />
+    <Compile Include="Load\MainGame\Level2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
