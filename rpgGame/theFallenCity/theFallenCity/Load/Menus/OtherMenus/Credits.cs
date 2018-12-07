@@ -1,53 +1,45 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
-using System.Xml.Serialization;
-
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Xna.Framework.Input;
 
 namespace theFallenCity
 {
-    public class HelpScreen : gameScreen 
+    public class Credits : gameScreen
     {
-        //background image
-        private Texture2D background;
         public Image image;
-        //backgrounf image
         public string Text, FontNames, Path;
         SpriteFont font;
-        ContentManager ContentP = Game1.MyContent;
-     
 
-
-        public HelpScreen()
+        //splashScreen.png
+        //splashScreen/splashScreen
+        public Credits()
         {
             FontNames = "textFonts/FontBoi";
-            //graphics = new GraphicsDeviceManager();
-            ContentP.RootDirectory = "Content";
+
         }
+
 
         public override void LoadContent()
         {
-            //spriteBatch = new SpriteBatch(GraphicsDevice);
-            background = ContentP.Load<Texture2D>("splashScreen/BlankBack");
             base.LoadContent();
-           image.LoadContent();
-
+            image.LoadContent();
+            //image.FadeEffect.FadeSpeed = 0.5f;
             font = content.Load<SpriteFont>(FontNames);
 
-
+            //content = new ContentManager(screenManager.Instance.Content.ServiceProvider, "Content");
+            //logoPath = "splashScreen/splashScreen";
         }
 
         public override void UnloadContent()
         {
             base.UnloadContent();
             image.UnloadContent();
-
         }
 
         public override void Update(GameTime gametime)
@@ -55,26 +47,20 @@ namespace theFallenCity
 
             base.Update(gametime);
             image.Update(gametime);
-
-            if (InputManager.Instance.KeyPressed(Keys.Space))
-            {
+            if(InputManager.Instance.KeyPressed(Keys.Space)){
                 ScreenManager.Instance.ScreenChange("TitleScreen");
             }
-
+           
         }
 
         public override void Draw(SpriteBatch spritebatch)
         {
-            base.Draw(spritebatch);
             image.Draw(spritebatch);
+            spritebatch.DrawString(font, "This game was created by Lukas Hensel-Williams", new Vector2(10, 30), Color.Red);
+            spritebatch.DrawString(font, "Made for game programing 2018 ", new Vector2(30, 50), Color.Green);
+            spritebatch.DrawString(font, "Press the spacebar to go back to the main menu ", new Vector2(30, 80), Color.Green);
 
-
-            spritebatch.DrawString(font, "Your movement is W, A, S, D. Collect the mushroom to win. ", new Vector2(30, 100), Color.Red);
-            spritebatch.DrawString(font, "Press space to go back to he menu. ", new Vector2(30, 300), Color.AliceBlue);
 
         }
-
-
-
     }
 }

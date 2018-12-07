@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LevelSelect>
+    <image>
+          <Path>splashScreen/BlankBack</Path>
+        <IsActive>true</IsActive>
+    </image>
+</LevelSelect>

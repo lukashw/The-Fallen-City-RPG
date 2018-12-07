@@ -50,16 +50,14 @@ namespace theFallenCity
             menu = new Menu();
             menu.OnMenuChange +=  menu_OnMenuChange;
             soundEffects = new List<SoundEffect>();
-
-
-
-    }
+        }
 
         void menu_OnMenuChange(object sender, EventArgs e)
         {
             xmlManger<Menu> xmlMenuManger = new xmlManger<Menu>();
             menu.UnloadContent();
             //Add trasnistion if you want
+
             menu = xmlMenuManger.Load(menu.ID);
             menu.LoadContent();
             menu.OnMenuChange += menu_OnMenuChange;

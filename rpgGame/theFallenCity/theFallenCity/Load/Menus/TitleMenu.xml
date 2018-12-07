@@ -2,10 +2,14 @@
 <Menu>
     <Axis>Y</Axis>   
     <Effects>FadeEffect</Effects>
+     <image>
+          <Path>splashScreen/BlankBack</Path>
+        <IsActive>true</IsActive>
+    </image>
     
     <Item>
-        <LinkType>Menu</LinkType>
-        <LinkID>Load/Menus/LevelSelect.xml</LinkID>
+        <LinkType>Screen</LinkType>
+        <LinkID>LevelSelect</LinkID>
         <Image>
             <Text>Choose level</Text>
         </Image>  
@@ -21,8 +25,8 @@
              </Item>
     
     <Item>
-        <LinkType>Menu</LinkType>
-            <LinkID>Load/Menus/Credits.xml</LinkID>
+        <LinkType>Screen</LinkType>
+            <LinkID>Credits</LinkID>
         <Image>
             <Text>Credits</Text>
         </Image>  
