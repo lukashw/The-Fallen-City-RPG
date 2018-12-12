@@ -5,6 +5,7 @@ namespace theFallenCity
 {
     public class TitleScreen : gameScreen
     {
+        //this is the main draw class for the title screen 
         MenuManager menuManager;
 
         public TitleScreen()

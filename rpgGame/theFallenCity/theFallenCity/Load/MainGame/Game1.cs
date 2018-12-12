@@ -10,7 +10,7 @@ using System.Xml.Serialization;
 namespace theFallenCity
 {
     /// <summary>
-    /// This is the main type for your game.
+    /// this is the First game level class inside is the draw method and score keeping.
     /// </summary>
     public class Game1 : Game
     {

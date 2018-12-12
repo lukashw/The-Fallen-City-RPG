@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
+//this is the main image class images .
 //uppercase is public lower is private
 
 namespace theFallenCity 

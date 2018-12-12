@@ -8,6 +8,7 @@ using System.IO;
 
 namespace theFallenCity
 {
+    //this is a part of the xml codding and decoding for the maps
     public class xmlManger <T>
     {
         public Type Type;

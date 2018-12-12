@@ -6,7 +6,7 @@ namespace theFallenCity
 {
     public class SpriteSheetEffect :ImageEffect
     {
-
+        //this is the class for animation of the sprite scheet.
         public int FrameCounter;
         public int SwitchFrame;
         public Vector2 CurrentFrame;
